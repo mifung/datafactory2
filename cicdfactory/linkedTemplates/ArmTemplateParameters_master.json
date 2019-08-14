@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "cicdfactory"
+		},
+		"Blob_connectionString": {
+			"value": ""
+		},
+		"Sink_properties_typeProperties_fileName": {
+			"value": "DemoCopy2.json"
+		},
+		"Sink_properties_typeProperties_folderPath": {
+			"value": "datafactorymove"
+		},
+		"Source_properties_typeProperties_fileName": {
+			"value": "DemoCopy.json"
+		},
+		"Source_properties_typeProperties_folderPath": {
+			"value": "datafactorymove"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
