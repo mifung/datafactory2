@@ -1,0 +1,29 @@
+{
+	"name": "Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "WHO",
+				"type": "String"
+			},
+			{
+				"name": "WEEK",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat"
+			},
+			"fileName": "DemoCopy.json",
+			"folderPath": "datafactorymove"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
