@@ -118,7 +118,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "myfeature2",
+						"name": "newrelease5",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
