@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "QuickTable",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "azuresql8222019",
@@ -9,25 +9,18 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "Transaction",
+				"name": "customerid",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "Customer",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "Amount",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 0
+				"name": "name",
+				"type": "varchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Transactions"
+			"table": "quicktable"
 		}
 	}
 }
