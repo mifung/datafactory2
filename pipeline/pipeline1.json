@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "newrelease5",
+				"name": "newrelease_a_demo_release",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
