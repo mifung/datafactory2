@@ -1,0 +1,37 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "quicktable"
+				},
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "Transaction"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "Join1"
+				},
+				{
+					"name": "Join2"
+				},
+				{
+					"name": "Join3"
+				}
+			],
+			"script": "\n\nsource(output(\n\t\tTransaction as integer,\n\t\tCustomer as integer,\n\t\tAmount as decimal(18,0)\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> quicktable\nsource(output(\n\t\tcustomerid as integer,\n\t\tname as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> Transaction\nJoin2 join(joinType:'inner',\n\tbroadcast: 'none')~> Join1\nJoin3 join(joinType:'inner',\n\tbroadcast: 'none')~> Join2\nquicktable join(joinType:'inner',\n\tbroadcast: 'none')~> Join3"
+		}
+	}
+}
