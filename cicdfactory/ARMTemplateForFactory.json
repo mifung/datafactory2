@@ -43,7 +43,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "newrelease5",
+						"name": "newrelease_a_demo_release",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -92,23 +92,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/Source')]",
 				"[concat(variables('factoryId'), '/datasets/Sink')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSourceDatasetEntity1')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "Blob",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureBlob",
-				"typeProperties": {}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/Blob')]"
 			]
 		},
 		{
