@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Blob'"
 		},
+		"azuresql8222019_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'azuresql8222019'"
+		},
 		"Sink_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": "DemoCopy2.json"
@@ -56,6 +60,9 @@
 					},
 					"Blob_connectionString": {
 						"value": "[parameters('Blob_connectionString')]"
+					},
+					"azuresql8222019_connectionString": {
+						"value": "[parameters('azuresql8222019_connectionString')]"
 					},
 					"Sink_properties_typeProperties_fileName": {
 						"value": "[parameters('Sink_properties_typeProperties_fileName')]"

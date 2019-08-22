@@ -8,6 +8,9 @@
 		"Blob_connectionString": {
 			"value": ""
 		},
+		"azuresql8222019_connectionString": {
+			"value": ""
+		},
 		"Sink_properties_typeProperties_fileName": {
 			"value": "DemoCopy2.json"
 		},
