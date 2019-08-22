@@ -1,5 +1,5 @@
 {
-	"name": "customer",
+	"name": "Transaction",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "azuresql8222019",
@@ -9,18 +9,25 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "customerid",
+				"name": "Transaction",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "name",
-				"type": "varchar"
+				"name": "Customer",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Customer"
+			"table": "Transactions"
 		}
 	}
 }
